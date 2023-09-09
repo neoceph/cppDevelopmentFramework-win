@@ -109,8 +109,8 @@ configure_file(
 
 ########################################################################################
 # specifying install rules for dependency libraries
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/dependencies/lib DESTINATION .)
-set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+# install(DIRECTORY ${PROJECT_SOURCE_DIR}/dependencies/lib DESTINATION .)
+#set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 
 
 
@@ -122,7 +122,7 @@ include(InstallRequiredSystemLibraries)
 string(TIMESTAMP YEAR_MONTH "%Y_%m")
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
 # set(CPACK_GENERATOR "RPM;DEB;TGZ;TXZ;TZ;STGZ;NSIS;NSIS64") # NSIS 3.0 and above is not available for Ubuntu 18.04
-set(CPACK_GENERATOR "STGZ")
+set(CPACK_GENERATOR "NSIS64")
 set(CPACK_PACKAGE_NAME ${Project})
 set(CPACK_PACKAGE_RELEASE ${YEAR_MONTH})
 set(CPACK_PACKAGE_CONTACT ${Project_DEVELOPER})

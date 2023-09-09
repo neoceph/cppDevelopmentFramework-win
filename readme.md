@@ -37,6 +37,7 @@
 - Rpmbuild (required for .rpm package generation) 
     - Creating rpm will require an rpmbuild executable. To get rpm installed issue `sudo apt-get install rpm`
 - NSIS 3.0 and up (required for windows installer package generation)
+    - For windows NSIS can be downloaded and installed from [here](https://nsis.sourceforge.io/Download)
     - Creating NSIS will require an nsis executable. In Ubuntu-18.04 nsis installer in the form of .deb might be required as it doesn't come with the distribution. The installation file could be found [here](https://ubuntu.pkgs.org/18.04/ubuntu-universe-amd64/nsis_2.51-1_amd64.deb.html). It might also require a dependency on nsis-common which can be downloaded from [here](http://ftp.de.debian.org/debian/pool/main/n/nsis/nsis-common_3.08-2_all.deb). The debian packages are searched and found on the website [here](https://debian.pkgs.org/). Installation of .deb package is done using the command `sudo dpkg -i DEB_PACKAGE_NAME`
 ## Packing installer
 1. Assigning a git tag is easy 
