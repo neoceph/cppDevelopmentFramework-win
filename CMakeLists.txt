@@ -110,6 +110,9 @@ configure_file(
 ########################################################################################
 # specifying install rules for dependency libraries
 # install(DIRECTORY ${PROJECT_SOURCE_DIR}/dependencies/lib DESTINATION .)
+install(
+  TARGETS ${Project}
+)
 #set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 
 
