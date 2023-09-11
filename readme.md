@@ -6,39 +6,8 @@
 ## Requirements for Windows
 - CMake 3.21 or above
 - Ninja from [here](https://github.com/ninja-build/ninja/releases)
-- Doxygen 1.9.4 and above
-    -`sudo apt update` 
-    - `sudo apt install doxygen`
-- GraphViz required if class UML diagram generation is desired
-    - `sudo apt install graphviz`
-    - Settings on the Doxyfile that needs to changes are 
-        - HIDE_UNDOC_RELATIONS = NO #YES
-        - HAVE_DOT = YES #NO
-        - UML_LOOK = YES #NO
-        - UML_LIMIT_NUM_FIELDS = 50 #10
-        - TEMPLATE_RELATIONS = YES #NO
-        - CALL_GRAPH = YES #NO
-        - CALLER_GRAPH = YES #NO
-        - DOT_IMAGE_FORMAT = svg #png
-        - INTERACTIVE_SVG = YES #NO
-        - DOT_GRAPH_MAX_NODES = 100 #50
-        - DOT_TRANSPARENT = YES #NO
-- Sphinx 4.4.0 and above
-    `sudo apt-get install python3-sphinx`
-- Sphinx readthedocs theme
-    `pip3 install sphinx_rtd_theme`
-- Breathe
-    - `pip3 install breathe`
-    - `pip3 install sphinx-sitemap`
-- Latexmk (required for pdf generation)
-    - If not available can be installed with `sudo apt-get update -y` and next `sudo apt-get install -y latexmk`
-    - If object inheritance is used, epstopdf might be required. In such cases texlive-font-utils are required which can be installed using `sudo apt-get install texlive-font-utils`
-    - For .sty file not found use `apt install texlive-latex-extra`
-- Rpmbuild (required for .rpm package generation) 
-    - Creating rpm will require an rpmbuild executable. To get rpm installed issue `sudo apt-get install rpm`
 - NSIS 3.0 and up (required for windows installer package generation)
     - For windows NSIS can be downloaded and installed from [here](https://nsis.sourceforge.io/Download)
-    - Creating NSIS will require an nsis executable. In Ubuntu-18.04 nsis installer in the form of .deb might be required as it doesn't come with the distribution. The installation file could be found [here](https://ubuntu.pkgs.org/18.04/ubuntu-universe-amd64/nsis_2.51-1_amd64.deb.html). It might also require a dependency on nsis-common which can be downloaded from [here](http://ftp.de.debian.org/debian/pool/main/n/nsis/nsis-common_3.08-2_all.deb). The debian packages are searched and found on the website [here](https://debian.pkgs.org/). Installation of .deb package is done using the command `sudo dpkg -i DEB_PACKAGE_NAME`
 ## Packing installer
 1. Assigning a git tag is easy 
     - `git tag -a v1.0.3 -m 'Version 1.0.3 - Feature 1'`
@@ -55,15 +24,5 @@
 ## Changing the name of the project
 - Project name needs to be changed in two places
     1. Line #3 of the root directory CMakeLists.txt file `set(Project Project-Name)`. The 'Project-Name' can be changed to any appropriate name.
-    2. Line #35 `PROJECT_NAME = "AM-CFD"` of the [Doxyfile.in](./documentation/Doxyfile.in) located in the *./documentation* directory. 
-
-## Generating documentation
-- Under the build directory after a successful build `make docs` will generate api documentation under doc/api directory
-    - in the doc/api/latex/ directory issuing `make pdf` will generate pdf from the generated latex files
-- Under the doc/usermanual directory issuing `make html` will generate html documentation under doc/readthedocs/_build/html directory
-- `make latexpdf` will generate pdf documentation under doc/readthedocs/_build/latex directory
-
-## Example read the docs documentation
-- Example readthedocs documentation is hosted [here](https://cpp-development-framework.readthedocs.io/en/latest/).
-
+    2. Line #35 `PROJECT_NAME = "Test Projects"` of the [Doxyfile.in](./documentation/Doxyfile.in) located in the *./documentation* directory. 
     
