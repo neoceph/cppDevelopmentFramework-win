@@ -14,6 +14,7 @@
     - `git tag` lists all the available tags.
     - Check other `git tag` details [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 2. Build the code 
+    - Use vscode's 'Build' button with 'CmakeTool' extension otherwise,
     - create a directory named 'build' with `mkdir build`
     - change to build directory with `cd build`
     - copy the configure.sh to build directory with `cp ../configure.sh .`
